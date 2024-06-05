@@ -1,10 +1,11 @@
 #pragma once
 
 #include "Core.h"
+#include "Hazel/Events/Event.h"
 
 namespace Hazel {
 
-	class __declspec(dllexport) Application
+	class HAZEL_API Application
 	{
 
 	public:
