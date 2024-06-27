@@ -7,6 +7,11 @@
 #include "Hazel/Events/Event.h"
 #include "Hazel/Events/ApplicationEvent.h"
 
+#include "Hazel/ImGui/ImGuiLayer.h"
+
+#include "Hazel/Renderer/Shader.h"
+#include "Hazel/Renderer/Buffer.h"
+#include "Hazel/Renderer/VertexArray.h"
 
 namespace Hazel {
 
@@ -30,9 +35,18 @@ namespace Hazel {
 		bool OnWindowClose(WindowCloseEvent& e);
 
 		std::unique_ptr<Window> m_Window;
+		std::unique_ptr<ImGuiLayer> m_ImGuiLayer;
 		bool m_Running = true;
 		LayerStack m_LayerStack;
 
+		//Vertex Array		顶点数组
+		//Vertex Buffer		顶点缓存
+		//Index Buffer		索引缓存区
+		std::shared_ptr<Shader> m_Shader;
+		std::shared_ptr<VertexArray> m_VertexArray;
+
+		std::shared_ptr<Shader> m_BlueShader;
+		std::shared_ptr<VertexArray> m_SquareVA;
 	private:
 		static Application* s_Instance;
 	};
