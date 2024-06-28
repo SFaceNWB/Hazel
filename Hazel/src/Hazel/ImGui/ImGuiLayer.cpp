@@ -92,8 +92,6 @@ namespace Hazel{
 	{
 		static bool show = true;
 		ImGui::ShowDemoWindow(&show);
-
-
 	}
 	
 }
