@@ -40,17 +40,6 @@ namespace Hazel {
 		std::unique_ptr<ImGuiLayer> m_ImGuiLayer;
 		bool m_Running = true;
 		LayerStack m_LayerStack;
-
-		//Vertex Array		顶点数组
-		//Vertex Buffer		顶点缓存
-		//Index Buffer		索引缓存区
-		std::shared_ptr<Shader> m_Shader;
-		std::shared_ptr<VertexArray> m_VertexArray;
-
-		std::shared_ptr<Shader> m_BlueShader;
-		std::shared_ptr<VertexArray> m_SquareVA;
-
-		OrthographicCamera m_Camera;
 	private:
 		static Application* s_Instance;
 	};
